@@ -1,0 +1,6 @@
+CREATE TABLE spots(
+    id SERIAL PRIMARY KEY,
+    spot_number VARCHAR(10) NOT NULL UNIQUE,
+    occupied BOOLEAN DEFAULT FALSE,
+    spot_type VARCHAR(20) NOT NULL CHECK ( spot_type IN ('VIP', 'PREFERENTIAL', 'NORMAL'))
+);
